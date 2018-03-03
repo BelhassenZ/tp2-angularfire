@@ -1,0 +1,9 @@
+<img [src]="pathPrefix+user.url" alt="Invalid Url" width="100rem">
+
+<form #myAddForm="ngForm" ngNativeValidate>
+  <input type="text" name="nom" class="form-control" [(ngModel)]="user.nom" placeholder="Nom complet" required><br>
+
+  <input type="text" name="nom" class="form-control" [(ngModel)]="user.url" placeholder="URL image de profil" required><br>
+
+  <button class="btn btn-primary" (click)="onSubmit()" [disabled]="!myAddForm.valid" >Commencer</button>
+</form>
